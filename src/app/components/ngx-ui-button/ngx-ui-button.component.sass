@@ -1,3 +1,5 @@
+@import '~src/sass/common/index'
+
 .ngx-ui-button
   display: inline-block
   cursor: pointer
@@ -9,7 +11,7 @@
   box-shadow: none
   border-style: solid
   box-shadow: 1px 1px 4px 1px rgba(0,0,0,0.2)
-  transition: box-shadow 150ms linear
+  transition: all 150ms linear
 
   &:hover
     box-shadow: 1px 1px 6px 3px rgba(0,0,0,0.2)
@@ -47,30 +49,334 @@
 .ngx-ui-button--squere
   border-radius: 0
 
+.ngx-ui-button--stretched
+  display: block
+  width: 100%
+
 //themes
+
+//blue
 .ngx-ui-button--theme-blue
+  color: $white
+
   &.ngx-ui-button--success
-    background-color: #0278ae
-    border-color: #0278ae
-    color: white
+    background-color: $blue-success
+    border-color: $blue-success
+    color: $white
 
   &.ngx-ui-button--error
-    background-color: #ed6663
-    border-color: #ed6663
-    color: white
+    background-color: $blue-error
+    border-color: $blue-error
+    color: $white
 
   &.ngx-ui-button--alert
-    background-color: #e8ffc1
-    border-color: #e8ffc1
-    color: white
+    background-color: $blue-alert
+    border-color: $blue-alert
+    color: $white
 
   &.ngx-ui-button--info
-    background-color: #a5ecd7
-    border-color: #a5ecd7
-    color: white
+    background-color: $blue-info
+    border-color: $blue-info
+    color: $white
 
   &.ngx-ui-button--standart
-    background-color: #51adcf
-    border-color: #51adcf
-    color: white
+    background-color: $blue-standart
+    border-color: $blue-standart
+
+  //for bordered buttons
+
+  &.ngx-ui-button--bordered
+    background-color: $white
+
+    &.ngx-ui-button--success
+      color: $blue-success
+
+      &:hover
+        background-color: $blue-success
+        color: $white
+
+    &.ngx-ui-button--error
+      color: $blue-error
+
+      &:hover
+        background-color: $blue-error
+        color: $white
+
+    &.ngx-ui-button--alert
+      color: $blue-alert
+
+      &:hover
+        background-color: $blue-alert
+        color: $white
+
+    &.ngx-ui-button--info
+      color: $blue-info
+
+      &:hover
+        background-color: $blue-info
+        color: $white
+
+    &.ngx-ui-button--standart
+      color: $blue-standart
+
+      &:hover
+        background-color: $blue-standart
+        color: $white
+
+  // for transparent buttons
+
+  &.ngx-ui-button--transparent
+    background-color: transparent
+    border-color: transparent
+    box-shadow: none
+
+    &:hover
+      box-shadow: 1px 1px 6px 3px rgba(0,0,0,0.2)
+
+    &.ngx-ui-button--success
+      color: $blue-success
+
+      &:hover
+        border-color: $blue-success
+
+    &.ngx-ui-button--error
+      color: $blue-error
+
+      &:hover
+        border-color: $blue-error
+
+    &.ngx-ui-button--alert
+      color: $blue-alert
+
+      &:hover
+        border-color: $blue-alert
+
+    &.ngx-ui-button--info
+      color: $blue-info
+
+      &:hover
+        border-color: $blue-info
+
+    &.ngx-ui-button--standart
+      color: $blue-standart
+
+      &:hover
+        border-color: $blue-standart
+
+//green
+.ngx-ui-button--theme-green
+  color: $white
+
+  &.ngx-ui-button--success
+    background-color: $green-success
+    border-color: $green-success
+    color: $white
+
+  &.ngx-ui-button--error
+    background-color: $green-error
+    border-color: $green-error
+    color: $white
+
+  &.ngx-ui-button--alert
+    background-color: $green-alert
+    border-color: $green-alert
+    color: $white
+
+  &.ngx-ui-button--info
+    background-color: $green-info
+    border-color: $green-info
+    color: $white
+
+  &.ngx-ui-button--standart
+    background-color: $green-standart
+    border-color: $green-standart
+
+  //for bordered buttons
+
+  &.ngx-ui-button--bordered
+    background-color: $white
+
+    &.ngx-ui-button--success
+      color: $green-success
+
+      &:hover
+        background-color: $green-success
+        color: $white
+
+    &.ngx-ui-button--error
+      color: $green-error
+
+      &:hover
+        background-color: $green-error
+        color: $white
+
+    &.ngx-ui-button--alert
+      color: $green-alert
+
+      &:hover
+        background-color: $green-alert
+        color: $white
+
+    &.ngx-ui-button--info
+      color: $green-info
+
+      &:hover
+        background-color: $green-info
+        color: $white
+
+    &.ngx-ui-button--standart
+      color: $green-standart
+
+      &:hover
+        background-color: $green-standart
+        color: $white
+
+  // for transparent buttons
+
+  &.ngx-ui-button--transparent
+    background-color: transparent
+    border-color: transparent
+    box-shadow: none
+
+    &:hover
+      box-shadow: 1px 1px 6px 3px rgba(0,0,0,0.2)
+
+    &.ngx-ui-button--success
+      color: $green-success
+
+      &:hover
+        border-color: $green-success
+
+    &.ngx-ui-button--error
+      color: $green-error
+
+      &:hover
+        border-color: $green-error
+
+    &.ngx-ui-button--alert
+      color: $green-alert
+
+      &:hover
+        border-color: $green-alert
+
+    &.ngx-ui-button--info
+      color: $green-info
+
+      &:hover
+        border-color: $green-info
+
+    &.ngx-ui-button--standart
+      color: $green-standart
+
+      &:hover
+        border-color: $green-standart
+
+//dark
+.ngx-ui-button--theme-dark
+  color: $white
+
+  &.ngx-ui-button--success
+    background-color: $dark-success
+    border-color: $dark-success
+    color: $white
+
+  &.ngx-ui-button--error
+    background-color: $dark-error
+    border-color: $dark-error
+    color: $white
+
+  &.ngx-ui-button--alert
+    background-color: $dark-alert
+    border-color: $dark-alert
+    color: $white
+
+  &.ngx-ui-button--info
+    background-color: $dark-info
+    border-color: $dark-info
+    color: $white
+
+  &.ngx-ui-button--standart
+    background-color: $dark-standart
+    border-color: $dark-standart
+
+  //for bordered buttons
+
+  &.ngx-ui-button--bordered
+    background-color: $white
+
+    &.ngx-ui-button--success
+      color: $dark-success
+
+      &:hover
+        background-color: $dark-success
+        color: $white
+
+    &.ngx-ui-button--error
+      color: $dark-error
+
+      &:hover
+        background-color: $dark-error
+        color: $white
+
+    &.ngx-ui-button--alert
+      color: $dark-alert
+
+      &:hover
+        background-color: $dark-alert
+        color: $white
+
+    &.ngx-ui-button--info
+      color: $dark-info
+
+      &:hover
+        background-color: $dark-info
+        color: $white
+
+    &.ngx-ui-button--standart
+      color: $dark-standart
+
+      &:hover
+        background-color: $dark-standart
+        color: $white
+
+  // for transparent buttons
+
+  &.ngx-ui-button--transparent
+    background-color: transparent
+    border-color: transparent
+    box-shadow: none
+
+    &:hover
+      box-shadow: 1px 1px 6px 3px rgba(0,0,0,0.2)
+
+    &.ngx-ui-button--success
+      color: $dark-success
+
+      &:hover
+        border-color: $dark-success
+
+    &.ngx-ui-button--error
+      color: $dark-error
+
+      &:hover
+        border-color: $dark-error
+
+    &.ngx-ui-button--alert
+      color: $dark-alert
+
+      &:hover
+        border-color: $dark-alert
+
+    &.ngx-ui-button--info
+      color: $dark-info
+
+      &:hover
+        border-color: $dark-info
+
+    &.ngx-ui-button--standart
+      color: $dark-standart
+
+      &:hover
+        border-color: $dark-standart
+
 

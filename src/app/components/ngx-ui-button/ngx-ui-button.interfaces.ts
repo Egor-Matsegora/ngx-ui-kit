@@ -15,7 +15,7 @@ export declare type ButtonShape = 'normal' | 'squere' | 'rounded';
 
 export declare type ButtonSize = 'small' | 'medium' | 'large';
 
-export declare type ButtonFill = 'full' | 'bordered' | 'transparent' | 'gradient' | 'polygon';
+export declare type ButtonFill = 'full' | 'bordered' | 'transparent';
 
 export declare type ButtonTheme = 'blue' | 'dark' | 'green';
 
