@@ -1,0 +1,76 @@
+.ngx-ui-button
+  display: inline-block
+  cursor: pointer
+  box-sizing: border-box
+  text-transform: uppercase
+  text-align: center
+  line-height: normal
+  white-space: nowrap
+  box-shadow: none
+  border-style: solid
+  box-shadow: 1px 1px 4px 1px rgba(0,0,0,0.2)
+  transition: box-shadow 150ms linear
+
+  &:hover
+    box-shadow: 1px 1px 6px 3px rgba(0,0,0,0.2)
+
+  &:disabled
+    opacity: 0.7
+    cursor: not-allowed
+
+// sizes
+.ngx-ui-button--large
+  font-size: 1.2em
+  padding: 0.3em 0.8em
+  min-width: 130px
+  border-width: 2px
+
+.ngx-ui-button--medium
+  font-size: 1em
+  padding: 0.3em 0.5em
+  min-width: 110px
+  border-width: 2px
+
+.ngx-ui-button--small
+  font-size: 0.8em
+  padding: 0.3em 0.4em
+  min-width: 90px
+  border-width: 1px
+
+// shape
+.ngx-ui-button--rounded
+  border-radius: 50%
+
+.ngx-ui-button--normal
+  border-radius: 4px
+
+.ngx-ui-button--squere
+  border-radius: 0
+
+//themes
+.ngx-ui-button--theme-blue
+  &.ngx-ui-button--success
+    background-color: #0278ae
+    border-color: #0278ae
+    color: white
+
+  &.ngx-ui-button--error
+    background-color: #ed6663
+    border-color: #ed6663
+    color: white
+
+  &.ngx-ui-button--alert
+    background-color: #e8ffc1
+    border-color: #e8ffc1
+    color: white
+
+  &.ngx-ui-button--info
+    background-color: #a5ecd7
+    border-color: #a5ecd7
+    color: white
+
+  &.ngx-ui-button--standart
+    background-color: #51adcf
+    border-color: #51adcf
+    color: white
+
