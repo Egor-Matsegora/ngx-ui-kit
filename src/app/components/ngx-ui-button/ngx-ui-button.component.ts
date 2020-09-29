@@ -4,7 +4,7 @@ import { ButtonOptions } from './ngx-ui-button.interfaces';
 @Component({
   selector: 'ngx-ui-button',
   templateUrl: './ngx-ui-button.component.html',
-  styleUrls: ['./ngx-ui-button.component.sass']
+  styleUrls: ['./ngx-ui-button.component.sass'],
 })
 export class NgxUiButtonComponent implements OnChanges, OnInit {
   @Input() buttonOptions: ButtonOptions;
@@ -21,10 +21,10 @@ export class NgxUiButtonComponent implements OnChanges, OnInit {
     fill: 'full',
     theme: 'blue',
     action: 'standart',
-    stretched: false
-  }
+    stretched: false,
+  };
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit(): void {
     this.initButtonOptions();
@@ -39,8 +39,8 @@ export class NgxUiButtonComponent implements OnChanges, OnInit {
   private initButtonOptions(): void {
     this.options = {
       ...this.defaultOptions,
-      ...this.buttonOptions
-    }
+      ...this.buttonOptions,
+    };
   }
 
   private generateClasses(): void {
@@ -51,6 +51,6 @@ export class NgxUiButtonComponent implements OnChanges, OnInit {
       `ngx-ui-button--theme-${this.options.theme}`,
       `ngx-ui-button--${this.options.action}`,
     ];
-    this.options.stretched && this.classNames.push(`ngx-ui-button--${this.options.stretched}`)
+    this.options.stretched && this.classNames.push(`ngx-ui-button--${this.options.stretched}`);
   }
 }

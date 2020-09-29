@@ -7,7 +7,9 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "build:elements": "ng build --prod --project ngx-ui-kit --output-hashing none && npm run pack:elements",
+    "pack:elements": "cat ./dist/ngx-ui-kit/runtime-es2015.js ./dist/ngx-ui-kit/polyfills-es2015.js ./dist/ngx-ui-kit/main-es2015.js > dist/ngx-ui-kit/ngx-ui-kit.js && ls -lah dist/ngx-ui-kit/ngx-ui-kit.js"
   },
   "private": true,
   "dependencies": {

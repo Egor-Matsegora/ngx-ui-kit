@@ -1,14 +1,21 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { Injector, NgModule } from '@angular/core';
+import { createCustomElement } from '@angular/elements';
 
-import { AppComponent } from './app.component';
 import { NgxUiButtonComponent } from './components/ngx-ui-button';
 import { NgxUiLoaderComponent } from './components/ngx-ui-loader';
 
 @NgModule({
-  declarations: [AppComponent, NgxUiButtonComponent, NgxUiLoaderComponent],
+  declarations: [NgxUiButtonComponent, NgxUiLoaderComponent],
   imports: [BrowserModule],
-  providers: [],
-  bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule {
+  constructor(private injector: Injector) {}
+
+  ngDoBootstrap() {
+    const button = createCustomElement(NgxUiButtonComponent, { injector: this.injector });
+    customElements.define('ngx-ui-button', button);
+    const loader = createCustomElement(NgxUiLoaderComponent, { injector: this.injector });
+    customElements.define('ngx-ui-loader', loader);
+  }
+}
