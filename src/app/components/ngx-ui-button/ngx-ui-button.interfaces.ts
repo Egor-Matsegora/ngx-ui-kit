@@ -1,10 +1,12 @@
+import { Themes } from 'src/app/interfaces/theme.interfaces';
+
 export interface ButtonOptions {
   type?: ButtonType;
   disabled?: boolean;
   shape?: ButtonShape;
   size?: ButtonSize;
   fill?: ButtonFill;
-  theme?: ButtonTheme;
+  theme?: Themes;
   action?: ButtonActions;
   stretched?: boolean;
 }
@@ -16,7 +18,5 @@ export declare type ButtonShape = 'normal' | 'squere' | 'rounded';
 export declare type ButtonSize = 'small' | 'medium' | 'large';
 
 export declare type ButtonFill = 'full' | 'bordered' | 'transparent';
-
-export declare type ButtonTheme = 'blue' | 'dark' | 'green';
 
 export declare type ButtonActions = 'success' | 'error' | 'alert' | 'info' | 'standart';

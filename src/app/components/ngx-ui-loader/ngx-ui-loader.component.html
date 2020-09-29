@@ -1,0 +1,32 @@
+<div
+  class="loader loader--theme-{{theme}}"
+  [ngClass]="{
+      'loader-progressbar': type === 'progressbar',
+      'loader-bubbles': type === 'bubbles',
+      'loader-spiner': type === 'spiner'
+    }"
+>
+
+  <div class="loader-progressbar__wrapper" *ngIf="type === 'progressbar'">
+    <div class="loader-progressbar__progress"></div>
+    <div class="loader-progressbar__background"></div>
+  </div>
+
+  <div class="loader-bubbles" *ngIf="type === 'bubbles'">
+    <div class="loader-bubbles__bubble loader-bubbles__bubble--1"></div>
+    <div class="loader-bubbles__bubble loader-bubbles__bubble--2"></div>
+    <div class="loader-bubbles__bubble loader-bubbles__bubble--3"></div>
+    <div class="loader-bubbles__bubble loader-bubbles__bubble--4"></div>
+  </div>
+
+
+
+  <div class="loader-spiner" *ngIf="type === 'spiner'">
+    <div class="loader-spiner__wrapper">
+      <div class="loader-spiner__large"></div>
+      <div class="loader-spiner__small"></div>
+      <div class="loader-spiner__center"></div>
+    </div>
+  </div>
+
+</div>
