@@ -1,0 +1,75 @@
+.share
+  display: inline-block
+
+  svg
+    max-height: 20px
+    max-width: 20px
+
+.share__wrapper
+  overflow: hidden
+  border-radius: 5px
+  padding: 10px
+  border: 1px solid #fafafa
+  box-shadow: 1px 1px 10px 2px rgba(0,0,0,0.3)
+  display: flex
+
+.share__container
+  display: flex
+  overflow: hidden
+  width: 0
+  transition: all 200ms ease-in
+
+.share__item
+  width: 20px
+  height: 20px
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-basis: 20px
+  margin-right: 10px
+  cursor: pointer
+
+.share__togler
+  width: 20px
+  height: 20px
+  position: relative
+  cursor: pointer
+
+  &::before
+    opacity: 0
+    transition: opacity 200ms ease-in
+
+.share__container--opened
+  width: 120px
+  height: auto
+
+.share__togler--opened
+  &:before
+    content: ''
+    display: block
+    position: absolute
+    top: -5px
+    left: -5px
+    width: 30px
+    height: 30px
+    overflow: hidden
+    border-radius: 50%
+    background-color: black
+    opacity: 0.1
+
+.share--vertical
+  .share__wrapper,
+  .share__container
+    flex-direction: column
+
+  .share__container
+    height: 0
+
+  .share__item
+    margin-right: 0
+    margin-bottom: 10px
+
+  .share__container--opened
+    width: auto
+    height: 120px
+    margin-bottom: 10px
