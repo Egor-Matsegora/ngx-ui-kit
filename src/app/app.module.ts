@@ -3,7 +3,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Injector, NgModule } from '@angular/core';
 import { createCustomElement } from '@angular/elements';
 
-import { AppComponent } from './app.component';
+// import { AppComponent } from './app.component';
 
 import { NgxUiButtonComponent } from './components/ngx-ui-button';
 import { NgxUiLoaderComponent } from './components/ngx-ui-loader';
@@ -14,12 +14,12 @@ import { NgxUiFeedbackFormComponent } from './components/ngx-ui-feedback-form/ng
   declarations: [
     NgxUiButtonComponent,
     NgxUiLoaderComponent,
-    AppComponent,
+    // AppComponent,
     NgxUiShareComponent,
     NgxUiFeedbackFormComponent,
   ],
   imports: [BrowserModule, FormsModule, ReactiveFormsModule],
-  bootstrap: [AppComponent],
+  // bootstrap: [AppComponent],
 })
 export class AppModule {
   constructor(private injector: Injector) {}
@@ -28,5 +28,9 @@ export class AppModule {
     customElements.define('ngx-ui-button', button);
     const loader = createCustomElement(NgxUiLoaderComponent, { injector: this.injector });
     customElements.define('ngx-ui-loader', loader);
+    const share = createCustomElement(NgxUiShareComponent, { injector: this.injector });
+    customElements.define('ngx-ui-share', share);
+    const feedback = createCustomElement(NgxUiFeedbackFormComponent, { injector: this.injector });
+    customElements.define('ngx-ui-feedback-form', feedback);
   }
 }
