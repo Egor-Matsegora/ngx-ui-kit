@@ -1,0 +1,166 @@
+@import '~src/sass/common/index'
+
+.feedback
+  display: inline-block
+  position: relative
+  font-size: 18px
+  line-height: normal
+  font-family: sans-serif
+  width: 0
+  height: 0
+
+  *
+    box-sizing: border-box
+
+.feedback--opened
+  width: auto
+
+.feedback__container
+  background-color: $light-theme-background
+  border-radius: 5px
+  overflow: hidden
+  width: 300px
+  padding: 20px 30px
+  box-shadow: none
+  border: 1px solid $light-theme-border
+  box-shadow: $standart-shadow
+  transition: $simple-transition
+
+.feedback--left
+  .feedback__container
+    transform: translateX(-5000px)
+
+  .feedback__container--opened
+    transform: translateX(0)
+
+  .feedback__togle-button--opened
+    transform: translateX(-5000px)
+
+.feedback--right
+  .feedback__container
+    transform: translateX(5000px)
+
+  .feedback__container--opened
+    transform: translateX(0)
+
+  .feedback__togle-button--opened
+    transform: translateX(5000px)
+
+.feedback__header
+  margin: 10px 0
+  padding: 5px 0 25px
+  text-align: center
+  text-transform: uppercase
+  font-weight: bold
+  border-bottom: 1px solid transparentize($light-theme-border, 0.6)
+
+.feedback__form
+  margin: 0
+  padding: 15px 0 0 0
+
+.feedback__control
+  margin-bottom: 25px
+  display: flex
+
+.feedback__label
+  margin-right: 15px
+  flex: 0 0 20px
+  align-self: center
+  overflow: hidden
+
+  svg
+    max-height: 16px
+
+.feedback__label--textarea
+  align-self: start
+  margin-top: 6px
+
+.feedback__input
+  flex: 1 0 auto
+  border: 0
+  outline: none
+  background-color: transparent
+  border-bottom: 1px solid $light-theme-border
+  padding: 5px 10px
+  transition: border-color 250ms ease-in-out
+
+  &:active,
+  &:focus
+    padding-bottom: 4px
+    border-bottom: 2px solid transparentize($light-theme-accent-color, 0.4)
+
+.feedback__input--textarea
+  resize: none
+
+.feedback__form-footer
+  display: flex
+  justify-content: space-around
+
+.feedback__form-button
+  display: block
+  width: 40px
+  height: 40px
+  flex-basis: 40px
+  padding: 12px
+  border: 0
+  border-radius: 50%
+  display: flex
+  justify-content: center
+  align-items: center
+  background-color: transparent
+  cursor: pointer
+  outline: none
+  transition: $simple-transition
+
+  &:hover,
+  &:active,
+  &:focus
+    box-shadow: $standart-shadow
+
+  svg
+    width: 100%
+
+.feedback__togle-button
+  position: absolute
+  top: 0
+  align-items: center
+  background-color: $light-theme-background
+  border: 1px solid $light-theme-border
+  border-radius: 50%
+  box-shadow: $standart-shadow
+  display: flex
+  cursor: pointer
+  height: 42px
+  width: 42px
+  justify-content: center
+  margin: 0
+  overflow: hidden
+  outline: none
+  padding: 0
+  transition: $simple-transition
+
+  svg
+    width: 50%
+
+.feedback--theme-dark
+  color: $white
+
+  svg
+      fill: $dark-theme-fill
+
+  .feedback__container
+    background-color: $dark-theme-background
+    border-color: $dark-theme-border
+
+  .feedback__header
+    border-bottom: 1px solid $dark-theme-border
+
+  .feedback__input
+    border-bottom-color: $dark-theme-fill
+
+    &:active,
+    &:focus
+      border-bottom-color: lighten($dark-theme-accent-color, 50)
+
+  .feedback__togle-button
+    background-color: $dark-theme-background

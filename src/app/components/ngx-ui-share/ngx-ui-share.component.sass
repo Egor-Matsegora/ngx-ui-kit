@@ -1,3 +1,5 @@
+@import '~src/sass/common/index'
+
 .share
   display: inline-block
 
@@ -9,8 +11,8 @@
   overflow: hidden
   border-radius: 5px
   padding: 10px
-  border: 1px solid #fafafa
-  box-shadow: 1px 1px 10px 2px rgba(0,0,0,0.3)
+  border: 1px solid $light-theme-border
+  box-shadow: $standart-shadow
   display: flex
 
 .share__container
@@ -56,6 +58,7 @@
     border-radius: 50%
     background-color: black
     opacity: 0.1
+    box-shadow: 1px 1px 10px 2px rgba(0, 0, 0, 0.1)
 
 .share--vertical
   .share__wrapper,
@@ -73,3 +76,12 @@
     width: auto
     height: 120px
     margin-bottom: 10px
+
+.share--theme-dark
+  svg
+    fill: $dark-theme-fill
+
+  .share__wrapper
+    border-color: $dark-theme-border
+    background-color: $dark-theme-background
+

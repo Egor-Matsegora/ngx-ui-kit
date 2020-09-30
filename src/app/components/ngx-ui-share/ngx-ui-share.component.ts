@@ -1,8 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-
-declare type ShareDirection = 'vertical' | 'horisontal';
-declare type Social = 'vk' | 'ok' | 'tw' | 'fb';
-declare type ShareTheme = 'dark' | 'light';
+import { ShareDirection, ShareSocial, UiTheme } from 'src/app/interfaces/theme.interfaces';
 
 @Component({
   selector: 'ngx-ui-share',
@@ -10,18 +7,18 @@ declare type ShareTheme = 'dark' | 'light';
   styleUrls: ['./ngx-ui-share.component.sass'],
 })
 export class NgxUiShareComponent implements OnInit {
-  @Input() direction: ShareDirection = 'vertical';
-  @Input() theme: ShareTheme = 'light';
+  @Input() direction: ShareDirection = 'horisontal';
+  @Input() theme: UiTheme = 'light';
 
   @Output() openContainer = new EventEmitter();
   @Output() closeContainer = new EventEmitter();
-  @Output() shared: EventEmitter<Social> = new EventEmitter();
+  @Output() shared: EventEmitter<ShareSocial> = new EventEmitter();
   isOpened: boolean;
   constructor() {}
 
   ngOnInit(): void {}
 
-  share(social: Social) {
+  share(social: ShareSocial) {
     const url: string = window.location.href;
     const share = {
       vk: 'http://vk.com/share.php?url=' + url,
